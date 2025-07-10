@@ -9,24 +9,39 @@ function MyApp() {
     </div>
   )
 }
+
 // yeh func Myapp ultimate parse hokar tree ke format me ban jata hai by the help of bundler
-const ReactElement = {
-    type: 'a', 
-    props: {
-        href: 'https://google.com',
-        target: '_blank'
-    },
-    children: 'Click me to visit google'
-}
+// const ReactElement = {
+//     type: 'a', 
+//     props: {
+//         href: 'https://google.com',
+//         target: '_blank'
+//     },
+//     children: 'Click me to visit google'
+// }
 // custom wale me ek alag render custom banaya tha isliye yaha nhi chal rha hai 
+
 
 const anotherElement = (
   <a href="https://google.com" target='_blank'>Visit google</a>
 )
 
+const anotherUser = "chai aur react"
+
+// react kya kya chahta hai 
+const reactElement = React.createElement(
+  'a', 
+  {href: 'https://google.com', target: '_blank'},
+  'click me to visit google',
+  anotherUser
+)
+// react element me if else nhi use kar sakte kyuki vo object hai aur object me if else nhi hote
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   
     // <MyApp />
     // ReactElement
-    anotherElement // yeh ek object hai to aise hi pass karna hoga 
+    // anotherElement // yeh ek object hai to aise hi pass karna hoga 
+    reactElement
+    // <App/>
 )
