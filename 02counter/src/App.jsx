@@ -11,11 +11,21 @@ function App() {
 
   // let counter = 15
 
+  // what happen if in interview?
   const addValue = () => {
     console.log("clicked", counter); 
-    counter = counter + 1
-    setCounter(counter)
-  }
+    setCounter(counter + 1)
+    setCounter(counter + 1)
+    setCounter(counter + 1)
+    setCounter(counter + 1)
+    // setCounter(counter + 1) // this will not work as it will take the old value of counter
+    // abhi value 6 hi aaegi  
+    // but if we use 
+    setCounter((prevCounter) => {
+      return prevCounter + 1
+    }) // this will work as it will take the latest value of counter
+    // ab value badhegi
+  } 
   // yaha par counter ka value badh to raha hai par show nhi ho rha hai
   // so we use hooks UI updation ko react control karta hai so hooks 
 
